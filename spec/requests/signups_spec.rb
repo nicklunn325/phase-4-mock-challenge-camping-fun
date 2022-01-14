@@ -17,7 +17,6 @@ RSpec.describe "Signups", type: :request do
 
       it 'returns the associated Activity data' do
         post '/signups', params: signup_params
-
         expect(response.body).to include_json({
           id: a_kind_of(Integer),
           name: "Archery",
